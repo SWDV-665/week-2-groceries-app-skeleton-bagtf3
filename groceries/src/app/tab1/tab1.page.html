@@ -15,10 +15,11 @@
 
 <!-- List of Sliding Items -->
   <ion-list>
-    <ion-item-sliding>
+    <ion-item-sliding  *ngFor="let item of items">
+
       <ion-item>
-        <ion-label>Potato</ion-label>
-        <p>1</p>
+        <ion-label>{{item.name}}</ion-label>
+        <p>{{item.quantity}}</p>
       </ion-item>
       <ion-item-options side="end">
 
@@ -27,52 +28,12 @@
           Update
         </ion-button>
 
-        <ion-button>
-          <ion-icon slot="start" name="trash"></ion-icon>
+        <button (click)="removeItem(item)" ion-button color="secondary" icon-start>
+          <ion-icon name="trash"></ion-icon>
           Done
-        </ion-button>
+        </button>
 
       </ion-item-options>
     </ion-item-sliding>
-
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>Fish</ion-label>
-        <p>2</p>
-      </ion-item>
-      <ion-item-options side="end">
-        <ion-button>
-          <ion-icon slot="start" name="create-outline"></ion-icon>
-          Update
-        </ion-button>
-
-        <ion-button>
-          <ion-icon slot="start" name="trash"></ion-icon>
-          Done
-        </ion-button>
-
-      </ion-item-options>
-    </ion-item-sliding>
-
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>Candy</ion-label>
-        <p>15</p>
-      </ion-item>
-      <ion-item-options side="end">
-        <ion-button>
-          <ion-icon slot="start" name="create-outline"></ion-icon>
-          Update
-        </ion-button>
-
-        <ion-button>
-          <ion-icon slot="start" name="trash"></ion-icon>
-          Done
-        </ion-button>
-
-      </ion-item-options>
-    </ion-item-sliding>
-
-
   </ion-list>
 </ion-content>
