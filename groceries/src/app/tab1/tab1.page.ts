@@ -54,7 +54,6 @@ export class Tab1Page {
 
   async showAddItemPrompt() {
     const prompt = this.alertCtrl.create({
-      title: "Add Item",
       message: "Please enter item...",
       inputs: [
         {
